@@ -22,7 +22,7 @@ metadata:
   labels:
     app: train-schedule
 spec:
-  replicas: $CANARY_REPLICAS #this number will comes from jenkinsfile
+  replicas: $CANARY_REPLICAS #this number will comes from jenkinsfile ,wee need it for clening pods after the tests
   selector:
     matchLabels:
       app: train-schedule
