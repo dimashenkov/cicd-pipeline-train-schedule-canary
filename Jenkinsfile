@@ -59,6 +59,7 @@ pipeline {
             }
             environment { 
                 CANARY_REPLICAS = 0
+                //0 means cleaning canary pods or deploing 0 pods
             }
             steps {
                 input 'Deploy to Production?'
