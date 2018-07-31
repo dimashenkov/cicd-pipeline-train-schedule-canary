@@ -12,7 +12,7 @@ spec:
   - protocol: TCP
     port: 8080
     nodePort: 8081
-
+#we dont actualy ned this service because train-schedule-kube.yml create main servis for all pods,but we create this servis onley for track: canary to test them on port 8081 
 ---
 
 apiVersion: extensions/v1beta1
