@@ -22,7 +22,7 @@ metadata:
   labels:
     app: train-schedule
 spec:
-  replicas: $CANARY_REPLICAS
+  replicas: $CANARY_REPLICAS #this number will comes from jenkinsfile
   selector:
     matchLabels:
       app: train-schedule
@@ -39,6 +39,7 @@ spec:
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8080
+        #all down is for selfhealing and autoscaling
         livenessProbe:
           httpGet:
             path: /
